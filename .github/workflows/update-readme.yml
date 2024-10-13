@@ -3,6 +3,8 @@ name: Update README
 on:
   schedule:
     - cron: '0 0 * * *'  # Runs every day at midnight
+  workflow_dispatch:  # This allows manual triggering from the GitHub Actions UI
+
 
 jobs:
   update-readme:
