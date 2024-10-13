@@ -1,34 +1,81 @@
 import datetime
 import requests
 import os
+from collections import defaultdict
 
 # GitHub username and token for authentication
 GITHUB_USERNAME = "Kaden"  # Replace with your GitHub username
 GITHUB_TOKEN = os.getenv("GH_PAT")  # Get the token from environment variables
 
-# Get age calculation
-birth_date = datetime.datetime(1987, 6, 15)  # Replace with your birth date
-today = datetime.datetime.now()
-age = today.year - birth_date.year - ((today.month, today.day) < (birth_date.month, birth_date.day))
-
-# Fetch GitHub statistics
+# Headers for authentication
 headers = {"Authorization": f"token {GITHUB_TOKEN}"}
 
-# Get repositories information
+# Fetch repositories information
 repos_url = f"https://api.github.com/users/{GITHUB_USERNAME}/repos"
 response = requests.get(repos_url, headers=headers)
 repos_data = response.json()
 
-if response.status_code == 200:
-    num_repos = len(repos_data)
-    total_stars = sum(repo['stargazers_count'] for repo in repos_data)
-else:
-    num_repos = 0
-    total_stars = 0
+# Initialize language data storage
+language_data = defaultdict(int)
 
-# TODO: Get commit data (requires more sophisticated API use due to rate limits and authentication requirements)
-total_commits = "N/A"  # Leave as "N/A" for now since commit counting involves a more complex approach
+if response.status_code == 200:
+    for repo in repos_data:
+        repo_name = repo['name']
+        languages_url = f"https://api.github.com/repos/{GITHUB_USERNAME}/{repo_name}/languages"
+        lang_response = requests.get(languages_url, headers=headers)
+        
+        if lang_response.status_code == 200:
+            lang_data = lang_response.json()
+            for language, size in lang_data.items():
+                language_data[language] += size
+else:
+    print("Failed to fetch repository data")
+
+# Calculate total code size and language percentages
+total_size = sum(language_data.values())
+language_percentages = {}
+
+for language, size in language_data.items():
+    language_percentages[language] = (size / total_size) * 100 if total_size > 0 else 0
+
+# Create language summary string
+language_summary = "\n".join([f"{language}: {percentage:.2f}%" for language, percentage in language_percentages.items()])
 
 # Update README.md file
-with open("README.md", "w") as readme_file:
-    readme_content = f"""
+readme_content = f"""
+```bash
+Kaden Fetch
+------------
+Location: Bay Area, CA
+
+GitHub Stats
+------------
+Repositories: {len(repos_data)}
+Stars Received: {sum(repo['stargazers_count'] for repo in repos_data)}
+
+Languages Used
+--------------
+{language_summary}
+
+Programming Languages
+----------------------
+- Python
+- Java
+- HTML
+- CSS
+
+Favorite Technologies
+----------------------
+- AWS
+- Django
+- GitHub Actions
+- Linux
+- Flask (for lightweight web applications)
+- Docker (for containerization)
+- PostgreSQL (as a relational database)
+- VS Code (as a preferred IDE)
+
+Contact Information
+--------------------
+Email: kaden@example.com
+LinkedIn: https://linkedin.com/in/kaden
