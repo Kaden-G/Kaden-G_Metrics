@@ -41,12 +41,17 @@ for language, size in language_data.items():
 # Create language summary string
 language_summary = "\n".join([f"{language}: {percentage:.2f}%" for language, percentage in language_percentages.items()])
 
-# Update README.md file
+from datetime import datetime
+
+current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
 readme_content = f"""
 ```bash
 Kaden Fetch
 ------------
 Location: Bay Area, CA
+
+Last Updated: {current_time}
 
 GitHub Stats
 ------------
