@@ -2,8 +2,8 @@ name: Update README
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Runs every day at midnight
-  workflow_dispatch:  # Allows manual triggering from the GitHub Actions UI
+    - cron: '0 0 * * *'  # Runs every day at midnight UTC
+  workflow_dispatch:    # Allows manual triggering from the GitHub Actions UI
 
 jobs:
   update-readme:
@@ -11,12 +11,12 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
-          ref: main  # This ensures the main branch is being checked out
+          ref: main  # Ensures the main branch is being checked out
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: '3.x'
 
@@ -29,16 +29,9 @@ jobs:
         run: python update_readme.py
 
       - name: Commit and Push Changes
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add README.md
-          # Check for changes before committing
-          if git diff-index --quiet HEAD --; then
-            echo "No changes to commit"
-          else
-            git commit -m "Automated README update"
-            git push
-          fi
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: github-actions[bot]
+          author_email: github-actions[bot]@users.noreply.github.com
+          message: "Automated README update"
+          add: "README.md"
