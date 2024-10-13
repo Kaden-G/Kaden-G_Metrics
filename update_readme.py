@@ -7,6 +7,11 @@ from collections import defaultdict
 GITHUB_USERNAME = "Kaden"  # Replace with your GitHub username
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")  # Get the token from environment variables
 
+# Check if GITHUB_TOKEN is available
+if not GITHUB_TOKEN:
+    print("Error: GITHUB_TOKEN environment variable is not set.")
+    exit(1)
+
 # Headers for authentication
 headers = {"Authorization": f"token {GITHUB_TOKEN}"}
 
@@ -46,37 +51,38 @@ language_percentages = {}
 for language, size in language_data.items():
     language_percentages[language] = (size / total_size) * 100 if total_size > 0 else 0
 
-# Create language summary string
-language_summary = "\n".join([f"{language}: {percentage:.2f}%" for language, percentage in language_percentages.items()])
+# Create language summary table
+language_summary = "| Language | Percentage |\n| --- | ---: |\n"
+for language, percentage in language_percentages.items():
+    language_summary += f"| {language} | {percentage:.2f}% |\n"
 
 # Update README.md file with a timestamp to ensure changes
 current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 readme_content = f"""
-```bash
-Kaden Fetch
+# Kaden Fetch
 ------------
 Location: Bay Area, CA
 
-Last Updated: {current_time}
+**Last Updated:** {current_time}
 
-GitHub Stats
+## GitHub Stats
 ------------
-Repositories: {len(repos_data)}
-Stars Received: {sum(repo.get('stargazers_count', 0) for repo in repos_data)}
+- **Repositories:** {len(repos_data)}
+- **Stars Received:** {sum(repo.get('stargazers_count', 0) for repo in repos_data)}
 
-Languages Used
+## Languages Used
 --------------
 {language_summary}
 
-Programming Languages
+## Programming Languages
 ----------------------
 - Python
 - Java
 - HTML
 - CSS
 
-Favorite Technologies
+## Favorite Technologies
 ----------------------
 - AWS
 - Django
@@ -87,8 +93,14 @@ Favorite Technologies
 - PostgreSQL (as a relational database)
 - VS Code (as a preferred IDE)
 
-Contact Information
+## Contact Information
 --------------------
-Email: kaden@example.com
-LinkedIn: https://linkedin.com/in/kaden
+- **Email:** kaden@example.com
+- **LinkedIn:** [https://linkedin.com/in/kaden](https://linkedin.com/in/kaden)
 """
+
+# Write the updated content to README.md
+with open("README.md", "w") as f:
+    f.write(readme_content)
+
+print("README.md has been updated successfully.")
