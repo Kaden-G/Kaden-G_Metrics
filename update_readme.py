@@ -31,4 +31,4 @@ total_commits = "N/A"  # Leave as "N/A" for now since commit counting involves a
 
 # Update README.md file
 with open("README.md", "w") as readme_file:
-    readme_file.write(f"""
+    readme_content = f"""
