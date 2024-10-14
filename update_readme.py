@@ -99,8 +99,9 @@ def main():
     current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
     readme_content = f"""
+```bash
+KADEN GODINEZ
 
-Kaden Fetch
 ------------
 Location: Bay Area, CA
 
