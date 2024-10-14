@@ -1,29 +1,36 @@
 
-# Kaden Fetch
+
+Kaden Fetch
 ------------
 Location: Bay Area, CA
 
-**Last Updated:** 2024-10-13 21:36:38
+Last Updated: 2024-10-14 04:26:28
 
-## GitHub Stats
+GitHub Stats
 ------------
-- **Repositories:** 0
-- **Stars Received:** 0
+Repositories: 5
+Stars Received: 0
 
-## Languages Used
+Languages Used
 --------------
 | Language | Percentage |
 | --- | ---: |
+| HTML | 53.01% |
+| HCL | 24.13% |
+| Python | 17.55% |
+| JavaScript | 1.87% |
+| Dockerfile | 0.88% |
+| Java | 2.56% |
 
 
-## Programming Languages
+Programming Languages
 ----------------------
 - Python
 - Java
 - HTML
 - CSS
 
-## Favorite Technologies
+Favorite Technologies
 ----------------------
 - AWS
 - Django
@@ -34,7 +41,7 @@ Location: Bay Area, CA
 - PostgreSQL (as a relational database)
 - VS Code (as a preferred IDE)
 
-## Contact Information
+Contact Information
 --------------------
-- **Email:** kaden@example.com
-- **LinkedIn:** [https://linkedin.com/in/kaden](https://linkedin.com/in/kaden)
+Email: kaden@example.com
+LinkedIn: https://linkedin.com/in/kaden
