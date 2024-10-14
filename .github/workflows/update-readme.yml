@@ -35,4 +35,4 @@ jobs:
           author_email: github-actions[bot]@users.noreply.github.com
           message: "Automated README update"
           add: "README.md"
-          github_token: ${{ secrets.GH_PAT }}  # Use your PAT for pushing
+          github_token: ${{ secrets.GH_PAT }}  # Use your PAT for pushing 
