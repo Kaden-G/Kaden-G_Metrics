@@ -136,8 +136,8 @@ Favorite Technologies
 
 Contact Information
 --------------------
-[![Email](https://img.shields.io/badge/Email-k.anthony.godinez%40gmail.com-blue?style=for-the-badge&logo=gmail)](mailto:k.anthony.godinez@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/kadengodinez/)
+email: k.anthony.godinez@gmail.com
+LinkedIn: https://www.linkedin.com/in/kadengodinez/
 
 """
     # Write the updated content to README.md
