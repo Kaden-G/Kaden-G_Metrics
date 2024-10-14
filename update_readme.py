@@ -2,11 +2,11 @@ import datetime
 import requests
 import os
 from collections import defaultdict
+import concurrent.futures
 
 # GitHub username and token for authentication
-GITHUB_USERNAME = "Kaden-G"  # Replace with your GitHub username
-GITHUB_TOKEN = os.getenv("GH_PAT")  # Get the PAT from environment variables
-
+GITHUB_USERNAME = "Kaden"  # Replace with your GitHub username
+GITHUB_TOKEN = os.getenv("PAT_TOKEN")  # Get the PAT from environment variables
 
 # Check if GITHUB_TOKEN is available
 if not GITHUB_TOKEN:
@@ -73,7 +73,6 @@ def main():
     language_data = defaultdict(int)
 
     # Fetch languages in parallel to optimize API calls
-    import concurrent.futures
     with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
         future_to_repo = {executor.submit(fetch_languages, repo['name'], headers): repo for repo in repos_data}
         for future in concurrent.futures.as_completed(future_to_repo):
@@ -101,6 +100,13 @@ def main():
 
     readme_content = f"""
 ```bash
+██████╗  █████╗ ██████╗ ██╗███╗   ██╗
+██╔══██╗██╔══██╗██╔══██╗██║████╗  ██║
+██████╔╝███████║██████╔╝██║██╔██╗ ██║
+██╔═══╝ ██╔══██║██╔══██╗██║██║╚██╗██║
+██║     ██║  ██║██║  ██║██║██║ ╚████║
+╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
+
 Kaden Fetch
 ------------
 Location: Bay Area, CA
@@ -139,3 +145,13 @@ Contact Information
 Email: kaden@example.com
 LinkedIn: https://linkedin.com/in/kaden
 """
+    # Write the updated content to README.md
+try:
+    with open("README.md", "w") as f:
+        f.write(readme_content)
+    print("README.md has been updated successfully.")
+except Exception as e:
+    print(f"Failed to write to README.md: {e}")
+    exit(1)
+if name == "main": main()
+    
