@@ -5,7 +5,8 @@ from collections import defaultdict
 
 # GitHub username and token for authentication
 GITHUB_USERNAME = "Kaden-G"  # Replace with your GitHub username
-GITHUB_TOKEN = os.getenv("PAT_TOKEN")  # Get the PAT from environment variables
+GITHUB_TOKEN = os.getenv("GH_PAT")  # Get the PAT from environment variables
+
 
 # Check if GITHUB_TOKEN is available
 if not GITHUB_TOKEN:
