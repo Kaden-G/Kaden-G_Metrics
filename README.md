@@ -5,7 +5,7 @@ KADEN GODINEZ
 ------------
 Location: Bay Area, CA
 
-Last Updated: 2024-10-14 04:40:18
+Last Updated: 2024-10-14 04:43:23
 
 GitHub Stats
 ------------
@@ -16,12 +16,12 @@ Languages Used
 --------------
 | Language | Percentage |
 | --- | ---: |
-| Java | 2.55% |
-| Python | 17.71% |
-| HTML | 52.90% |
-| HCL | 24.08% |
+| HTML | 52.99% |
+| HCL | 24.12% |
+| Python | 17.57% |
 | JavaScript | 1.87% |
 | Dockerfile | 0.88% |
+| Java | 2.56% |
 
 
 Programming Languages
@@ -44,6 +44,6 @@ Favorite Technologies
 
 Contact Information
 --------------------
-[![Email](https://img.shields.io/badge/Email-k.anthony.godinez%40gmail.com-blue?style=for-the-badge&logo=gmail)](mailto:k.anthony.godinez@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/kadengodinez/)
+email: k.anthony.godinez@gmail.com
+LinkedIn: https://www.linkedin.com/in/kadengodinez/
 
