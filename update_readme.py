@@ -5,8 +5,8 @@ from collections import defaultdict
 import concurrent.futures
 
 # GitHub username and token for authentication
-GITHUB_USERNAME = "Kaden"  # Replace with your GitHub username
-GITHUB_TOKEN = os.getenv("PAT_TOKEN")  # Get the PAT from environment variables
+GITHUB_USERNAME = "Kaden-G"  # Replace with your GitHub username
+GITHUB_TOKEN = os.getenv("GH_PAT")  # Get the PAT from environment variables
 
 # Check if GITHUB_TOKEN is available
 if not GITHUB_TOKEN:
@@ -99,13 +99,6 @@ def main():
     current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
     readme_content = f"""
-```bash
-██████╗  █████╗ ██████╗ ██╗███╗   ██╗
-██╔══██╗██╔══██╗██╔══██╗██║████╗  ██║
-██████╔╝███████║██████╔╝██║██╔██╗ ██║
-██╔═══╝ ██╔══██║██╔══██╗██║██║╚██╗██║
-██║     ██║  ██║██║  ██║██║██║ ╚████║
-╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
 
 Kaden Fetch
 ------------
@@ -146,12 +139,13 @@ Email: kaden@example.com
 LinkedIn: https://linkedin.com/in/kaden
 """
     # Write the updated content to README.md
-try:
-    with open("README.md", "w") as f:
-        f.write(readme_content)
-    print("README.md has been updated successfully.")
-except Exception as e:
-    print(f"Failed to write to README.md: {e}")
-    exit(1)
-if name == "main": main()
-    
+    try:
+        with open("README.md", "w") as f:
+            f.write(readme_content)
+        print("README.md has been updated successfully.")
+    except Exception as e:
+        print(f"Failed to write to README.md: {e}")
+        exit(1)
+
+if __name__ == "__main__":
+    main()
