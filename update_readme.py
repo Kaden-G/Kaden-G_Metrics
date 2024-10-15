@@ -100,10 +100,9 @@ def main():
 
     readme_content = f"""
 ```bash
-\\ Kaden-G //
+\\\\ Kaden-G //
 || Kaden-G ||
-// Kaden-G \\
-
+// Kaden-G \\\\
 ------------
 Location: Bay Area, CA
 
