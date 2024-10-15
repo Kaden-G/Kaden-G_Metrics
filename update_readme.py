@@ -100,7 +100,9 @@ def main():
 
     readme_content = f"""
 ```bash
-KADEN GODINEZ
+\\ Kaden-G //
+|| Kaden-G ||
+// Kaden-G \\
 
 ------------
 Location: Bay Area, CA
