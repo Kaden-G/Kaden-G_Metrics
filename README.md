@@ -1,12 +1,12 @@
 
-''' bash
+``` bash
 \\ Kaden-G //
 || Kaden-G ||
 // Kaden-G \\
 ------------
 Location: Bay Area, CA
 
-Last Updated: 2024-10-17 01:20:14
+Last Updated: 2024-10-17 03:42:48
 
 GitHub Stats
 ------------
@@ -17,8 +17,8 @@ Languages Used
 --------------
 | Language | Percentage |
 | --- | ---: |
-| Python | 17.60% |
 | Java | 2.56% |
+| Python | 17.60% |
 | HTML | 52.98% |
 | HCL | 24.12% |
 | JavaScript | 1.87% |
