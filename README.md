@@ -6,23 +6,24 @@
 ------------
 Location: Bay Area, CA
 
-Last Updated: 2024-10-27 01:26:00
+Last Updated: 2024-10-28 00:35:24
 
 GitHub Stats
 ------------
-Repositories: 4
+Repositories: 5
 Stars Received: 0
 
 Languages Used
 --------------
 | Language | Percentage |
 | --- | ---: |
-| Python | 17.60% |
-| Java | 2.56% |
-| HTML | 52.98% |
-| HCL | 24.12% |
-| JavaScript | 1.87% |
-| Dockerfile | 0.88% |
+| Python | 91.36% |
+| Java | 4.65% |
+| HTML | 2.59% |
+| HCL | 1.18% |
+| JavaScript | 0.09% |
+| Dockerfile | 0.04% |
+| Shell | 0.07% |
 
 
 Programming Languages
