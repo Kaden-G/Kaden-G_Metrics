@@ -6,7 +6,7 @@
 ------------
 Location: Bay Area, CA
 
-Last Updated: 2024-12-10 00:22:59
+Last Updated: 2024-12-11 00:22:39
 
 GitHub Stats
 ------------
@@ -18,10 +18,10 @@ Languages Used
 | Language | Percentage |
 | --- | ---: |
 | Python | 91.08% |
-| HTML | 2.62% |
-| Dockerfile | 0.07% |
 | Java | 4.90% |
 | Shell | 0.07% |
+| HTML | 2.62% |
+| Dockerfile | 0.07% |
 | HCL | 1.17% |
 | JavaScript | 0.09% |
 
