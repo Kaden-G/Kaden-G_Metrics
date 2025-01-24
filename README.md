@@ -25,6 +25,7 @@ Programming Languages
 - Java
 - HTML
 - CSS
+- Yaml
 
 Favorite Technologies
 ----------------------
@@ -32,10 +33,10 @@ Favorite Technologies
 - Django
 - GitHub Actions
 - Linux
-- Flask (for lightweight web applications)
-- Docker (for containerization)
-- PostgreSQL (as a relational database)
-- VS Code (as a preferred IDE)
+- Flask 
+- Docker 
+- AWS EKS 
+- IntelliJ Ultimate with Github Copilot
 
 Contact Information
 --------------------
