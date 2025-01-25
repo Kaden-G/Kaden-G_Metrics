@@ -6,7 +6,7 @@
 ------------
 Location: Bay Area, CA
 
-Last Updated: 2025-01-24 00:20:21
+Last Updated: 2025-01-25 00:19:51
 
 GitHub Stats
 ------------
@@ -25,7 +25,6 @@ Programming Languages
 - Java
 - HTML
 - CSS
-- Yaml
 
 Favorite Technologies
 ----------------------
@@ -33,10 +32,10 @@ Favorite Technologies
 - Django
 - GitHub Actions
 - Linux
-- Flask 
-- Docker 
-- AWS EKS 
-- IntelliJ Ultimate with Github Copilot
+- Flask (for lightweight web applications)
+- Docker (for containerization)
+- PostgreSQL (as a relational database)
+- VS Code (as a preferred IDE)
 
 Contact Information
 --------------------
