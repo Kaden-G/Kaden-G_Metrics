@@ -25,7 +25,7 @@ jobs:
 
       - name: Run Update Script
         env:
-          PAT_TOKEN: ${{ secrets.GH_PAT }}  # Use your PAT here
+          PAT_TOKEN: ${{ secrets.PAT }}  # Use your PAT here
         run: python update_readme.py
 
       - name: Commit and Push Changes
