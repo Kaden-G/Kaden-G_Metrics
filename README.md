@@ -1,8 +1,6 @@
 
-``` bash
-\\ Kaden-G //
-|| Kaden-G ||
-// Kaden-G \\
+
+KADEN GODINEZ
 ------------
 Location: Bay Area, CA
 
@@ -32,17 +30,8 @@ Programming Languages
 - Java
 - HTML
 - CSS
-
-Favorite Technologies
-----------------------
-- AWS
-- Django
-- GitHub Actions
-- Linux
-- Flask (for lightweight web applications)
-- Docker (for containerization)
-- PostgreSQL (as a relational database)
-- VS Code (as a preferred IDE)
+- Terraform
+- YAML
 
 Contact Information
 --------------------
