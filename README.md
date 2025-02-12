@@ -1,27 +1,30 @@
 
-
-KADEN GODINEZ
+``` bash
+\\ Kaden-G //
+|| Kaden-G ||
+// Kaden-G \\
 ------------
 Location: Bay Area, CA
 
-Last Updated: 2025-02-11 13:47:53
+Last Updated: 2025-02-12 00:20:43
 
 GitHub Stats
 ------------
-Repositories: 8
+Repositories: 11
 Stars Received: 0
 
 Languages Used
 --------------
 | Language | Percentage |
 | --- | ---: |
-| Python | 91.21% |
-| Java | 4.82% |
-| Shell | 0.07% |
-| HTML | 2.58% |
-| Dockerfile | 0.07% |
-| HCL | 1.16% |
-| JavaScript | 0.09% |
+| HTML | 8.97% |
+| JavaScript | 1.69% |
+| CSS | 1.08% |
+| Java | 5.08% |
+| Python | 82.01% |
+| Shell | 0.06% |
+| Dockerfile | 0.06% |
+| HCL | 1.04% |
 
 
 Programming Languages
@@ -30,8 +33,17 @@ Programming Languages
 - Java
 - HTML
 - CSS
-- Terraform
-- YAML
+
+Favorite Technologies
+----------------------
+- AWS
+- Django
+- GitHub Actions
+- Linux
+- Flask (for lightweight web applications)
+- Docker (for containerization)
+- PostgreSQL (as a relational database)
+- VS Code (as a preferred IDE)
 
 Contact Information
 --------------------
